@@ -2,6 +2,7 @@
 \documentclass [PhD] {uclathes}
 
 \usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
@@ -9,6 +10,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{linkcolor}{RGB}{0,0,102}
 \usepackage{hyperref} 
+\usepackage{placeins}
 \hypersetup{
 	pdfstartview = {XYZ},
 	colorlinks,
@@ -26,6 +28,8 @@
 \def \figscale {0.28}
 \usepackage{multicol}
 \usepackage{soul}
+\usepackage{longtable,booktabs}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Usually things live in separate flies.
@@ -103,7 +107,7 @@
 \input {chapter4/chapter4}
 \input {chapter5/chapter5}
  \typeout{}
-\bibliography{chapter3/chapter3}
+\bibliography{chapter2/chapter2, chapter3/chapter3}
 \bibliographystyle{unsrt}
 
 \end {document}
