@@ -1,5 +1,6 @@
 \chapter{Impact of human specific variants on modern human biology}
 \section{Introduction}
+\scomment{Missing the results. Also discussion/conclusion.}
 Uncovering genetic changes that make anatomically modern humans “unique” is critical for a comprehensive understanding of human evolution. Recent genomic advantages have began to elucidate the nuances of human evolution and how humankind relates to some of our closest hominid relatives. These advances are starting to reveal how intermixing between species has shaped modern human biology. Research has been done examining how regions of DNA that have been passed into homosapiens from our closest relatives, suggesting that some of this introgressed DNA may be adaptively beneficial or undergoing negative selection. On the other hand, there have been studies showing variant regions of DNA that are human-specific, or lacking in our closest relatives, suggesting that these mutations may have been important in developing modern human biology. 
 %Some studies show (**add examples, foxp2,etc). 
 One study used massively parallel reporter assays to look at regulatory effects of modern human specific variants \cite{weiss2021cis} in embryonic stem cells, neural progenitor cells, and bone osteoblasts finding (13\%) of sequences containing these variants showed active regulatory activity, and (23\%) of these drove differential expression between human groups. However, there hasn't been a comprehensive analysis determining and analysing the effect these mutations have on a broad range of human traits.
@@ -21,10 +22,10 @@ To estimate FDM heritability, we used a recently proposed method (RHE-mc) that c
 \subsection{UK Biobank (UKBB) genotype QC}
 We restricted all our analyses to a set of high-quality imputed SNPs (with a hard call threshold of 0.2 and an info score greater than or equal to 0.8), which, among the 291,273 imputed genotypes of UKBB unrelated white British individuals, 1) have MAF higher than 0.001, 2) are under Hardy-Weinberg equilibrium ($p > 10^{-7}$), and 3) are confidently imputed in more than 99\% of the genomes. Additionally, we excluded SNPs in the MHC region, resulting in a total of 7,774,235 SNP which we refer to as QC-ed SNPs.
 \subsection{Identifying Fixed Derived Mutations}
- We first determined derived allele frequencies from 504 African individuals in the 1000 genomes project phase3. We combined allele frequencies from ESN, GWD, LWK, MSL, YRI individuals in 1000 genomes in order to determine an African derived allele frequency for. We then determine the allele frequency in archaic individuals combining Vindija, and Altai neanderthals as well as the Denisovan individual. Combining the datasets, we examined 41,864,101 SNPs. We then filtered out SNPs with an African derived allele frequency >0.99 and >0.95 to find 25,448 and 50,505 mutations that are likely human specific. We then intersected these variants with those QC-ed SNPs in the UK Biobank to find 19,632 and 9,407 confident fixed derived mutations able to be tested. We expanded this set by including all QCed SNPs that were withing 200kb of a FDM95 and had an $r^2$ of 0.8, 0.9 and 0.99 to get 73,129, 71,280 and 62,933 expanded FDMs. 
+ We first determined derived allele frequencies from 504 African individuals in the 1000 genomes project phase3. We combined allele frequencies from ESN, GWD, LWK, MSL, YRI individuals in 1000 genomes in order to determine an African derived allele frequency for. We then determine the allele frequency in archaic individuals combining Vindija, and Altai neanderthals as well as the Denisovan individual. Combining the datasets, we examined 41,864,101 SNPs. We then filtered out SNPs with an African derived allele frequency >0.99 and >0.95 to find 25,448 and 50,505 mutations that are likely human specific. We then intersected these variants with those QC-ed SNPs in the UK Biobank to find 19,632 and 9,407 confident fixed derived mutations able to be tested. We expanded this set by including all QCed SNPs that were withing 200kb of a FDM95 and had an $r^2$ > 0.8, 0.9 or 0.99 to get 73,129, 71,280 and 62,933 expanded FDMs. 
  
 \subsection{Association Testing}
-To identify individual FDMs associated with a phenotype, we fit a linear regression model using plink 2.0 --glm and included covariates controlling for age, sex and the first 20 genotypic PCs, and first five FDM PCs. We used a stringent p-value threshold of $10^{-10}$ to correct for the number of FDMs and phenotypes tested. For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$.
+To identify individual FDMs associated with a phenotype, we fit a linear regression model using plink 2.0 --glm and included covariates controlling for age, sex and the first 20 genotypic PCs. We used a stringent p-value threshold of $10^{-10}$ to correct for the number of FDMs and phenotypes tested. We found 6573, 6411, and 5804 for expanded sets with $r^2$ > 0.8, 0.9 or 0.99. For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$.
 
 
 \subsection{Estimating FDM heritability with RHE-mc}
@@ -47,26 +48,26 @@ The standard errors (s.e.) of these statistics are computed using 100 jackknife 
 \section{Figures}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/fig4.1.png}
+    \includegraphics[width=\textwidth]{{chapter4/figures/fig4.1}.png}
     \caption{Cartoon depicting how Fixed Derived Mutations are determined}
     \label{fig:4.1}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/deltaplot.pdf}
+    \includegraphics[width=\textwidth]{{chapter4/figures/deltaplot}.pdf}
     \caption{Enrichment of FDM heritability in each phenotype and category}
     \label{fig:4.2}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[]{chapter4/figures/fds.rhemc.z_nim_mh.pdf}
+    \includegraphics[]{{chapter4/figures/fds.rhemc.z_nim_mh}.pdf}
     \caption{FDs RHEMC heritability enrichment according to ancestry}
     \label{fig:4.3}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/Z_nim_mh_category.pdf}
+    \includegraphics[width=\textwidth]{{chapter4/figures/Z_nim_mh_category}.pdf}
     \caption{Difference in heritability of FDMs vs modern humans by phenotype and category}
     \label{fig:4.4}
 \end{figure}

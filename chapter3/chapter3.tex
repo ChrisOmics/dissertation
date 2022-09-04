@@ -37,11 +37,11 @@ To improve our ability to identify NIMs that truly modulate phenotype, we design
 We employed the same simulations as previously described to evaluate our fine-mapping approach. The fine mapping approach yields a reduction in the FDP relative to association mapping (FDP of 15.6\% on average; Fig. 5b) while attributing the causal effect to a few dozen NIMs within the credible NIM set (mean: 79, median: 54 NIMs across all simulations). Applying our pipeline to the set of 96 UKBB phenotypes, we identified a total of 112 credible NIM regions containing 4,303 unique credible NIMs across 47 phenotypes (Fig. 6a). The median length of credible NIM regions, 65.7kb (95\% CI: [4.41kb, 469.3 kb]) is close to the expected length of Neanderthal introgressed segments \cite{skov2020nature} suggesting that the resolution of our approach is that of an introgressed LD block (Fig. 5c). While fine mapping generally attributes the causal signal to a subset of the tested NIMs (mean: 55.8, median: 37 NIMs across phenotypes), the degree of this reduction varies across regions likely reflecting differences in the LD among NIMs (Fig. 5d). We do not detect any credible NIM in 49 out of 96 phenotypes potentially due to the limited power of our procedure that aims to control the FDR (Fig. 5e). The sensitivity of our method is affected by both total heritability (Fig. 5f, Pearson’s $r = 0.49 , p = 3.3\times 10^{-7})$  and NIM heritability (Fig. 5g, Pearson’s $r = 0.36, p = 3.3\times10^{-4})$. A linear model that uses both total heritability and NIM heritability to predict the number of credible sets yields $r^2 = 0.29, p = 1.3\times10^{-5}$ and $0.015$, respectively), while linear models with only total heritability or only NIM heritability result in statistically lower $r^2$ (0.24 and 0.13, respectively).
 
 \subsection{Examination of the functional impact of credible NIMs}
-We annotated all 4,303 unique credible NIMs using SnpEff \cite{cingolani2012program} to identify a total of 26 NIMs with high (e.g., start codon loss, stop codon gain) or moderate impact (nonsynonymous variants) on genes (Fig. 6b, SI Data S7). We identified two credible NIMs, rs9427397 $(1:161,476,204 C>T)$ and rs60542959 $(12:56,660,905 G>T)$, that have a high impact on protein sequences. The 1:161,476,204 C>T mutation, a NIM that is associated with increased gamma glutamyltransferase and aspartate aminotransferase (enzymes associated with liver function) and decreased total protein levels in blood, introduces a premature stop codon in the FCGR2A gene (Fig. S7). FCGR2A codes for a receptor in many immune cells, such as macrophages and neutrophils, and is involved in the process of phagocytosis and clearing of immune complexes. This NIM is in a region that contains SNPs shown in several GWAS  linked to rheumatoid arthritis (Okada 2014, Laufer 2019). The other high impact mutation, $12:56,660,905\\ G>T (rs60542959)$, results in the loss of the start codon in COQ10A, and this SNP is a credible NIM for both mean platelet volume and standing height (Fig. 6c) . COQ10 genes (A and B) are important in respiratory chain reactions. Deficiencies of CoQ10 (MIM 607426) have been associated with encephalomyopathy, infantile multisystemic disease; cerebellar ataxia, and pure myopathy \cite{quinzii2008human}. The start codon in COQ10A is conserved among mammals with its loss having a potentially significant effect on COQ10A expression in immune cells \cite{kubota2020integrated}.
+We annotated all 4,303 unique credible NIMs using SnpEff \cite{cingolani2012program} to identify a total of 26 NIMs with high (e.g., start codon loss, stop codon gain) or moderate impact (nonsynonymous variants) on genes (Fig. 6b, SI Data S7). We identified two credible NIMs, rs9427397 $(1:161,476,204 C>T)$ and rs60542959 (12:56,660,905 $G>T)$, that have a high impact on protein sequences. The 1:161,476,204 C>T mutation, a NIM that is associated with increased gamma glutamyltransferase and aspartate aminotransferase (enzymes associated with liver function) and decreased total protein levels in blood, introduces a premature stop codon in the FCGR2A gene (Fig. S7). FCGR2A codes for a receptor in many immune cells, such as macrophages and neutrophils, and is involved in the process of phagocytosis and clearing of immune complexes. This NIM is in a region that contains SNPs shown in several GWAS  linked to rheumatoid arthritis (Okada 2014, Laufer 2019). The other high impact mutation, $12:56,660,905\\ G>T (rs60542959)$, results in the loss of the start codon in COQ10A, and this SNP is a credible NIM for both mean platelet volume and standing height (Fig. 6c) . COQ10 genes (A and B) are important in respiratory chain reactions. Deficiencies of CoQ10 (MIM 607426) have been associated with encephalomyopathy, infantile multisystemic disease; cerebellar ataxia, and pure myopathy \cite{quinzii2008human}. The start codon in COQ10A is conserved among mammals with its loss having a potentially significant effect on COQ10A expression in immune cells \cite{kubota2020integrated}.
 
-In addition, we detect 24 credible NIMs that function as missense mutations in 19 genes. Seven out of the 19 genes are known to have immune related functions (FCGR2A, PCDHG (A8, A9, B7, C4), STAT2, and IKZF3).  The NIM in STAT2 $(rs2066807, 12:56,740,682 C>G)$ was the first adaptive introgression locus to be identified (Mendez 2012). The STAT2 introgressed variant segregates at 0.066 frequency in the UKBB white British and leads to an I594M amino acid change in the corresponding protein. STAT2 gene and COQ10A are neighboring genes thereby providing an example of an introgressed region that potentially impacts function at multiple genes (Fig. 6c). 
+In addition, we detect 24 credible NIMs that function as missense mutations in 19 genes. Seven out of the 19 genes are known to have immune related functions (FCGR2A, PCDHG (A8, A9, B7, C4), STAT2, and IKZF3).  The NIM in STAT2 (rs2066807, 12:56,740,682 $C>G)$ was the first adaptive introgression locus to be identified (Mendez 2012). The STAT2 introgressed variant segregates at 0.066 frequency in the UKBB white British and leads to an I594M amino acid change in the corresponding protein. STAT2 gene and COQ10A are neighboring genes thereby providing an example of an introgressed region that potentially impacts function at multiple genes (Fig. 6c). 
 
-At least seven of the 12 genes not known to be immune related have other important functions documented in the literature, such as DNA replication/damage (FANCA, CCDC8), transition in meiosis (FBXO34), detoxification/metabolism (AKR1C4), and neurological/developmental (ZNF778, ANKRD11, TBC1D32) functions. $rs17134592 (10:5260682 C>G)$ is a non-synonymous mutation in AKR1C4, a gene that is involved in the metabolism of ketone-containing steroids in the liver. The NIM is associated with increased serum bilirubin levels $(p = 3e-11)$  (Fig. S7a) while also being associated with increased levels of alkaline phosphatase, insulin-like growth factor 1 (IGF1) and decreased apolipoprotein A, sex hormone binding globulin (SHBG) and triglyceride levels.  rs17134592 has been identified to be a splicing QTL that is active in the liver and testis in the GTeX data (Fig. S7b). This NIM alters Leucine to Valine (L311V) which, in combination with the tightly-linked non-synonymous variant rs3829125 (S145C) in the same gene, have been shown to confer a three-to-five-fold reduction in catalytic activity of the corresponding enzyme (3-alpha hydroxysteroid dehydrogenase) in human liver \cite{kume1999characterization}). Interestingly, the single amino acid change S145C did not significantly alter enzyme activity suggesting the importance of the amino acid residue at position 311 for the substrate binding of the enzyme.
+At least seven of the 12 genes not known to be immune related have other important functions documented in the literature, such as DNA replication/damage (FANCA, CCDC8), transition in meiosis (FBXO34), detoxification/metabolism (AKR1C4), and neurological/developmental (ZNF778, ANKRD11, TBC1D32) functions. rs17134592 (10:5260682 $C>G$) is a non-synonymous mutation in AKR1C4, a gene that is involved in the metabolism of ketone-containing steroids in the liver. The NIM is associated with increased serum bilirubin levels $(p = 3e-11)$  (Fig. S7a) while also being associated with increased levels of alkaline phosphatase, insulin-like growth factor 1 (IGF1) and decreased apolipoprotein A, sex hormone binding globulin (SHBG) and triglyceride levels.  rs17134592 has been identified to be a splicing QTL that is active in the liver and testis in the GTeX data (Fig. S7b). This NIM alters Leucine to Valine (L311V) which, in combination with the tightly-linked non-synonymous variant rs3829125 (S145C) in the same gene, have been shown to confer a three-to-five-fold reduction in catalytic activity of the corresponding enzyme (3-alpha hydroxysteroid dehydrogenase) in human liver \cite{kume1999characterization}). Interestingly, the single amino acid change S145C did not significantly alter enzyme activity suggesting the importance of the amino acid residue at position 311 for the substrate binding of the enzyme.
 \section{Methods}
 \subsection{Identification and design of SNPs that tag Neanderthal ancestry on the UK Biobank Axiom array} \label{3.3.1}
 We chose a subset of SNPs to add to the UKBiobank Axiom array that would tag introgressed Neanderthal alleles segregating in present-day European populations.
@@ -131,14 +131,14 @@ Our study has several limitations due to the current availability of data and st
 \section{Figures}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter3/figures/fig3.1.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.1}.png}
     \caption{Benchmarking approaches for estimating the heritability components of Neanderthal introgression. We group simulations by relationships between minor allele frequency (MAF) and local linkage disequilibrium at a SNP on effect size (MAF-LD coupling): BASELINE, COMMON, RARE, HIGH, LOW. In each group, we perform 12 simulations with varying polygenicity and heritability (see Methods). Additionally, we combine results from all simulations together as ALL. We plot the distributions of two Z-scores (y-axis), one on each row: (a) Z-score (=) tests whether the estimated and true NIM heritability are equal, and (b) Z-score () tests whether the estimated per-NIM heritability is the same as the per-SNP heritability of MH SNPs (see Methods). In each panel, we present results from a variance components analysis method (RHE-mc) using four different input annotations: ancestry only where ancestry is either NIM or MH, ancestry + MAF, ancestry + LD, ancestry + MAF + LD. A calibrated method is expected to have Z-scores distributed around zero and within 2 (shaded region). Among all tested approaches, only RHE-mc with ancestry + MAF + LD annotations is calibrated across simulations.}
     \label{fig:3.1}
 \end{figure}
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter3/figures/fig3.2.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.2}.png}
     \caption{Distributions of minor allele frequency (MAF) and LD-score in NIMs and MH SNPs. Empirical cumulative distribution functions of (a) MAF and (b) LD scores of NIMs (in solid green line) and MH SNPs (in pink dashed line) estimated in the UK Biobank (UKBB). (c) Boxplots of MAFs of NIMs (on the left filled in green) and MH SNPs (on the right side filled in pink) while controlling for LD score (UKBB). (d) Boxplots of LD score (UKBB) of NIMs and MH SNPs while controlling for MAF. NIMs and MH SNPs are divided by the 20, 40, 60, 80, 100 (c) LD score (UKBB) percentile or MAF percentile (d) based on all QC-ed SNPs (7,774,235 imputed SNPs with MAF > 0.001). The lower and upper edges of a box represent the first and third quartile (qu1 and qu3), respectively; the horizontal red line inside the box indicates median ($md$); the whiskers extend to the most extreme values inside inner fences, $md \pm 1.5 (qu3 - qu1)$.}
     \label{fig:3.2}
 \end{figure}
@@ -146,7 +146,7 @@ Our study has several limitations due to the current availability of data and st
 \clearpage
 
 \begin{center}
-\includegraphics[width=\textwidth]{chapter3/figures/fig3.3.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.3}.png}
 \emph{Figure 3.3(Caption on next page.)}
 \label{fig:3.3}
 \end{center}
@@ -157,14 +157,14 @@ Our study has several limitations due to the current availability of data and st
 \clearpage
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter3/figures/fig3.4.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.4}.png}
     \caption{Comparing heritability analyses with and without controlling for MAF and LD in UKBB phenotypes. Each phenotype is shown with one dot colored by the phenotypic category it belongs to, on the y-axis based on its point estimate and standard error (estimated by RHE-mc with Ancestry annotation) and on the x-axis based on its point estimate and standard error (estimated by RHE-mc with ancestry + MAF + LD annotation). Estimates shown are (a) total heritability $\hat{h^2}$, (b) NIM heritability $\hat{h^2_{NIM}}$, and (c) the difference between per-NIM heritability and matched MH SNPs heritability $\Delta_{h^2}$. Not controlling for MAF and LD leads to underestimation of NIM heritability, which leads to false positives when testing whether heritability at a NIM is elevated or depleted relative to a MH SNP.}
     \label{fig:3.4}
 \end{figure}
 \clearpage
 \begin{center}
-    \includegraphics[width=\textwidth]{chapter3/figures/fig3.5.png}
-        \includegraphics[width=\textwidth]{chapter3/figures/fig3.5.1.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.5}.png}
+        \includegraphics[width=\textwidth]{{chapter3/figures/fig3.5.1}.png}
 \emph{Figure 3.5 (Caption on next page.)}
 \end{center}
 \begin{figure}[!htb]
@@ -173,7 +173,7 @@ Our study has several limitations due to the current availability of data and st
 \end{figure}
 \clearpage
 \begin{center}
-        \includegraphics[width=\textwidth]{chapter3/figures/fig3.6.png}
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.6}.png}
         \emph{Figure 3.6 (Caption on next page.)}
 \end{center}
 \begin{figure}[!htb]
@@ -182,5 +182,137 @@ Our study has several limitations due to the current availability of data and st
     \label{fig:3.6}
 \end{figure}
 
-
 \section{Supplement}
+\subsection{Supplementary Figures}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.1s}.png}
+    \caption{Supplementary Figure S1. Benchmarking different methods for estimating the total SNP heritability. We grouped the simulations by the five different MAF-LD coupling: BASELINE, COMMON, RARE, HIGH, LOW, as labeled on top of each column. In each group, there are 12 simulations with different levels of polygenicity and heritability (see Methods). Additionally, we combined simulations from all five architectures together as ALL for the sixth column. On the y-axis, Z-score (h2=h2) tests whether the estimated and simulated total heritability are equal. In each panel, the results from RHE-mc with four different annotations, ancestry only, ancestry + MAF, ancestry + LD, ancestry + MAF + LD are shown on the x-axis. A calibrated method is expected to have all Z-scores distributed around zero and within 2 (shaded region). Among all tested methods, only RHE-mc with annotation ancestry + MAF + LD satisfies this criterion. }
+        \label{fig:S1}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.2s}.png}
+    \caption{Supplementary Figure S2. Population structure within white British samples. PC-1 from the whole genome genotypes (released by UKBB) is shown on the left, and NIM PC-1 is shown on the right. We used a 20-by-20 grid along the latitude and longitude, dividing the map into 400 colonies. We then computed the average PC projection as well as the median longitude and latitude among the individuals belonging to each colony, if there are at least 10 individuals in a colony. Each color-filled circle with a 5 kilometer radius represents one colony on the map. To maximize the visible differences, we sorted the colonies by their PC values and used the rank to determine the color of the colony. Compared to NIM PC-1, PC-1 shows a much stronger correlation with geographical location.}
+        \label{fig:S2}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.3s}.png}
+    \caption{Supplementary Figure S3. Comparing heritability estimates from RHE-mc without controlling for NIM PCs with Ancestry+MAF+LD annotation and RHE-mc with Ancestry annotation in UKBB phenotypes. This figure is plotted in the same way as Fig. 4. The trend that not controlling for MAF and LD lead to underestimation of  (a) total heritability h2, (b) NIM heritability  h2NIM, and stronger NIM heritability depletion (c)  h2 is also apparent when NIM PCs are not controlled for.}
+        \label{fig:S3}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.4s}.png}
+    \caption{Supplementary Figure S4. Credible NIM in the FCGR2A gene associated with gamma-glutamyl transferase levels. Plot of 200kb region surrounding rs9427397 (marked in black diamond; hg19 coordinates), a credible NIM in FCGR2A that introduces a premature stop codon and is associated with increased levels of gamma glutamyltransferase (while also associated with increased levels of aspartate aminotransferase and decreased total protein). The plot displays other NIMs in the region along with their LD (r2) to rs9427397 computed in 1000 Genomes Europeans.}
+        \label{fig:S4}
+\end{figure}
+\clearpage
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/fig3.4s}.png}
+    \caption{Supplementary Figure S5. Credible NIM in the AKR1C4 gene is associated with bilirubin levels. (a) Plot of 300kb region surrounding rs17134592 (marked in black diamond; hg19 coordinates), a non-synonymous NIM in AKR1C4, that is associated with increased serum bilirubin levels. The plot displays other NIMs in the region along with their LD (r2) to rs17134592. (b) rs17134592 is a splicing QTL in liver (AKR1C8P) and testis (AKR1C4) identified in GTEx v8.}
+        \label{fig:S5}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/a2f1}.png}
+    \caption{Appendix  2 - Figure 1. Benchmark stratified LDSC regression (S-LDSR) with in-sample and out-of-sample LD scores. We group the simulations by the MAF-LD coupling: BASELINE, COMMON, RARE, HIGH, LOW, and ALL, as labeled on the x-axis. We plot the distributions of three Z-scores (y-axis), one on each panel: (a) Z-score (h2=0) tests whether the estimated NIM heritability is different from the matched MH heritability, (b) Z-score (h2NIM=hNIM2) tests whether the estimated and expected NIM heritability are equal, and (c) Z-score (h2=h2) tests whether the estimated and simulated total heritability are equal. In each panel, S-LDSR with the out-of-sample LD score from 1000 Genomes (1KG) is shown in green and S-LDSR with in-sample LD score from UKBB in pink. In S-LDSR, only ancestry annotation is used. The Z-scores within 2 are color shaded. S-LDSR (1KG) is not calibrated even for BASELINE architecture.}
+        \label{fig:A2.1}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter3/figures/a3f1}.png}
+    \caption{Appendix 3 - Figure 1. NIM heritability in the 96 UKBB phenotypes without controlling for NIM PCs. This figure is plotted in the same way as Fig. 3. Heritability estimates are largely similar, but fewer phenotypes are significant. Three phenotypes have significant positive NIM heritability (Z-score (h2NIM=0) > 3): overall health rating, waist-hip-ratio, and gamma glutamyltransferase. Fourteen phenotypes (standing height, sitting height, weight, body fat percentage, whole body fat-free mass, whole body water mass, trunk fat-free mass, trunk predicted mass, basal metabolic rate, RBC count, apolipoprotein A, HDL cholesterol, triglycerides) are significantly depleted for NIM heritability (Z-score < -3). }
+        \label{fig:A3.1}
+\end{figure}
+\clearpage
+
+
+\subsection{Supplementary Data}
+Supplementary data include 10 items, Data S1-S10 are available at:\\ \href{https://github.com/AprilWei001/NIM}{https://github.com/AprilWei001/NIM}
+\begin{enumerate}
+    \item Data S1. UKBB phenotype annotation. 
+    \item Data S2: RHE-mc results in simulated data. 
+    \item Data S3: RHE-mc results with Ancestry+MAF+LD annotations and NIM PCs included in covariates applied to 96 UKBB phenotypes
+    \item Data S4: RHE-mc results with Ancestry only annotation and NIM PCs included in covariates applied to 96 UKBB phenotypes
+    \item Data S5: RHE-mc results with Ancestry+MAF+LD annotation without NIM PC in covariates applied to 96 UKBB phenotypes
+    \item Data S6: Fine mapping FDP in simulated data. 
+    \item Data S7: 112 credible NIM sets and credible NIMs
+    \item Data S8: SnpEff annotation of all unique credible NIMs
+    \item Data S9. Stratified LD score regression results in simulated data using LD score from 1KG
+    \item Data S10. Stratified LD score regression results in simulated data using LD score from UKBB
+\end{enumerate}
+\section{Appendix}
+\subsection{Appendix 1: Identification of SNPs that tag} Neanderthal ancestry on the UK Biobank Axiom array 
+Starting with the confidently inferred Neanderthal haplotypes identified in Sankararaman et al. 2014, we identified whether a SNP segregating in a target modern human population owes its origin to the Neanderthal gene flow event as follows:
+1. We identified sets of haplotypes that are confidently labeled as Neanderthal, N by the Conditional Random Field (CRF) method proposed in Sankararaman et al. 2014 scanning for runs of consecutive SNPs with marginal probability of Neanderthal ancestry $\ge0.90$. We also identified sets of haplotypes that are confidently labeled as non-Neanderthal, MH by scanning for SNPs with marginal probability $\ge0.1$). We also required the Neanderthal haplotype to be at least 0.02 cM long.
+2. For each SNP called in the 1000 Genomes dataset, we required that none of the derived alleles at this SNP falls on one of the modern human haplotypes in the set MH and all of the haplotypes in N carry the derived allele. This procedure allows for some false negatives in the predictions of the CRF.
+3. We ran this procedure on the combined calls from the European ancestry populations (CEU, GBR, FIN, IBS and TSI) in the 1000 Genomes Project.
+ 
+This procedure yielded a total of 95,462 SNPs that are likely to be Neanderthal-derived. We winnowed down this list to 43,026 SNPs after removing ones already tagged at $r^2>0.8$ by SNPs on the UKBiLEVE array. We then designed a greedy algorithm to capture the remaining untagged SNPs that could still be accommodated on the array (we determined the number of oligonucleotide features that would be needed to genotype each SNP as well as the total number of features available on the array through discussions with UKBiobank Axiom array design team).
+
+Specifically, we computed LD between all pairs of Neanderthal-derived SNPs and then iteratively picked SNPs with the highest score to add to the array where the score was computed as:
+$$Score_{SNP j}  =  \frac{\sum_{i=1}^n  [\delta_{r^2>0.80}(i,j)][\text{Derived frequency}_{SNP i}]}{\text{Features required to genotype SNP j}}$$
+
+Here $\delta_{r^2>0.80}(i,j)$ is an indicator variable that is 1 if the squared correlation coefficient between SNPs i and j is $>0.80$ and zero otherwise. Thus, SNP j is scored higher if it tags other untagged SNPs on the array. The other two terms upweight SNPs that tag other SNPs with high derived allele frequency in Europeans and downweight SNPs by the number of oligonucleotide features required to genotype it.
+
+We iteratively chose SNPs until we obtained 6,027 SNPs (requiring 16,674 features) that fully tagged the remaining set of Neanderthal-derived SNPs. These 6,027 SNPs were then added to the UKBiobank Axiom array.
+
+\subsection{Appendix 2: Estimating NIM heritability with partitioned LD-score regression}
+We considered two candidate methods for estimating the NIM heritability in large datasets and testing the related hypotheses to NIM heritability, S-LDSR (Finucane 2015) and RHE-mc (see Main text) (Pazokitoroudi 2020). S-LDSR can speedily estimate partitioned heritability given GWAS statistics and LD scores without any individual-level data. S-LDSR can be used with either in-sample LD scores (i.e., computed from the same data as for GWAS) or out-of sample LD scores (i.e., computed from an external and often much smaller data set). Out-of-sample LD scores from 1000 Genomes (1KG) is often used in S-LDSR (McArthur 2021, Koller 2021 ) because 1) it is computationally much cheaper to compute than using the GWAS cohorts, and 2) individual-level data from GWAS cohorts are not always accessible; despite that, S-LDSR with in-sample LD scores is more accurate in theory. 
+
+Previous studies by Koller et al and McArthur et al used S-LDSR to estimate the heritability from archaic ancestries. They computed the stratified LD scores using the 1000 Genomes (1KG) EUR and EAS samples and performed LD score regression against the GWAS statistics from a different cohort. If the ancestry from 1KG samples does not match well with the GWAS cohort, it could lead to biased heritability estimates. Additionally, the LD score distribution and MAF distributions of NIMs are very different from the distributions of MH SNPs (Fig. 1), which might also affect the heritability estimates if not taken into account. Finally, LD score regression is restricted to a subset of SNPs (typically with MAF $> 5\%$) which substantially reduces the number of NIMs analyzed. Here, we benchmarked S-LDSR on the simulated data with both out-of-sample LD scores from 1KG and the in-sample LD scores from all UKBB QC-ed data, stratified by ancestry (NIM vs MH). 
+
+First, we used the aforementioned simulations to evaluate the partitioned LD score regression in estimating NIM heritability. We downloaded the 1KG EUR data (from \hyperlink{https://storage.googleapis.com/broad-alkesgroup-public/LDSCORE/1000G_Phase3_plinkfiles.tgz}{\textbf{this site}}) that is typically used for LD score regression. There are 9,997,231 SNPs in the data, and 5,789,471 of them are shared with the UKBB QC-ed SNPs. Out of the 235,592 expanded NIMs defined in UKBB QC-ed data, 210,962 are present in 1KG EUR, and we refer to these SNPs as the 1KG NIMs. We defined the 9,786,269 SNPs in 1KG EUR that are not expanded NIMs as 1KG MH SNPs. We then computed the stratified LD score using GCTA software with flags \textit{--ld-score --ld-wind 10000} for all the 1KG SNPs, all the 1KG NIMs, and all the 1KG MH SNPs. From here, we computed the stratified LD score with $ldsc_{SNP} = ldsc_{NIM} + ldsc_{MH}$, such that each SNP has two stratified LD scores, one due to its LD with NIMs and another due to its LD with MH SNPs. We then intersected the 1KG SNPs with UKBB QC-ed SNPs, and used the shared 5,789,471 SNPs to perform stratified LD score regression. The S-LDSR is then performed with all SNPs that overlap between 1KG and UKBB. For each simulation, we ran S-LDSR to estimate $h_{NIM}^2, h_{MH}^2, \Delta_{h^2}$, and their standard errors from 200 jackknife blocks. We found that the results from using out-of-sample LD are biased even when heritability does not depend on  MAF and LD (i.e., BASELINE) (Appendix 2 - Figure 1). 
+
+As a comparison, we computed the in-sample stratified LD score using the UKBB QC-ed data and applied S-LDSR with these in-sample LD scores. In contrast to the previous results, the results are well calibrated for BASELINE, suggesting that the previous biases observed with BASELINE are due to the disagreement between the out-of-sample LD score and the in-sample LD score (Appendix 2 - Figure 1). Not surprisingly, the results for MAF and LD-dependent architectures are still biased, as these factors are not taken into account. We caution that our simulations are based on UKBB QC-ed SNPs, where non QC-ed SNPs do not have an impact on the simulated phenotypes. This setting will favor S-LDSR based on UKBB QC-ed SNPs more than in actual settings, and disfavor S-LDSR 1KG more than in actual settings. It is possible that in reality, the biases with in-sample LD score will become larger, and the biases with out-of-sample LD score will become smaller. Nonetheless, because it is often expensive to compute in-sample LD scores, the accuracy will largely depend on how well the external panel resembles the GWAS cohort. 
+
+The out-of-sample LD score could be particularly biased for low MAF SNPs, hence S-LDSR recommends not using annotations with fewer than $5\%$ of SNPs as best practice. This practice will necessarily exclude more than $70\%$ of NIMs and about half of the MH SNPs, and the heritability estimates from high MAF SNPs may not extrapolate to low MAF SNPs. Therefore, S-LDSR, under the best practice, is not suitable for studying Neanderthal introgressed variants. 
+
+\subsection{Appendix 3: The impact of inclusion of NIM PCs on NIM heritability estimates}
+We computed the first five NIM PCs using all NIMs in unrelated white British samples with ProPCA (Agrawal 2020). Compared to the regular genetic PCs (estimated from common SNPs), NIM PCs are only weakly correlated with birth GPS locations (Fig. S2), consistent with the fact that Neanderthal introgression occurred soon after the out-of-African migration before population expansion. 
+
+When NIM PCs were not being controlled for (with remaining regular covariates still used), we found three phenotypes with significant NIM heritability (Z-score $(\hat{h_{NIM}^2}=0) > 3)$: overall health rating, waist-hip-ratio (WHR), and gamma glutamyltransferase (a measure of liver function). We also combined phenotypes into broader phenotypic categories and performed random effect meta-analysis on the nine categories that contain at least four phenotypes (see Methods). We found that $meta-\hat{h_{NIM}^2}$ is significantly larger than zero  (Z-score $> 2.53$ for one-tail $p = 0.05$ level) for all but two categories (eye, lipid metabolism), meaning that NIMs heritability is generally nonzero (Appendix 3 - Figure 1ac). We then tested whether NIM heritability is larger or smaller compared to MH SNPs  $(\hat{\Delta_{h^2}} = 0)$. Fourteen phenotypes (standing height, sitting height, weight, body fat percentage, whole body fat-free mass, whole body water mass, trunk fat-free mass, trunk predicted mass, basal metabolic rate, RBC count, apolipoprotein A, HDL cholesterol, triglycerides) remain significantly depleted (Z-score $< -3$), among which eight are anthropometric phenotypes, and three are related to lipid metabolism. This is in contrast to seventeen phenotypes when NIM PCs are controlled for (body mass index, hip circumference, waist circumference, standing height, sitting height, weight, whole body fat-free mass, whole body water mass, whole body impedance, trunk fat mass, trunk fat-free mass, trunk predicted mass, basal metabolic rate, RBC count, apolipoprotein A, HDL cholesterol, triglycerides). 
+
+Four phenotypic categories show significant NIM heritability depletion (anthropometry, blood biochemistry, blood pressure, lipid metabolism), and five are not significantly different with meta analysis (Appendix 3 - Figure 1bd). In contrast to the evidence for depletion in NIM heritability, we found no evidence for traits with elevated NIM heritability even when excluding NIM PCs (Appendix 3 - Figure 1d).
+
+\subsection{Appendix 4: Statistic to compare per-NIM heritability to per-SNP heritability at a set of background MH SNPs}
+In this note, we provide additional intuition behind our statistic to compare difference between the heritability at a NIM (per-NIM heritability) and the per-SNP heritability of a background set of MH SNPs:
+$$ \hat{\Delta_{h^2}} = \hat{h^2_{NIM}} - \hat{h_{MH}^2}$$
+
+Let $\sigma^2_{a,i} = \frac{h^2_{a,i}}{M_{a,i}}$ where $a \in\{NIM,MH\},i$  denotes one of the annotations (MAF,LD), $h_{a,i}^2$ denotes the heritability attributed to annotation (a,i) , and $M_{a,i}$ denotes the number of SNPs in annotation (a,i). Thus $\sigma_{a,i}^2$ denotes the per-SNP heritability associated with annotation (a,i). 
+
+The per-SNP heritability associated with NIMs is given by:
+$$\sigma_{NIM}^2 = \sum_i \frac{\sigma_{NIM,i}^2 M_{NIM,i}}{M_{NIM}} = \sum_i \frac{h_{NIM,i}^2}{M_{NIM}} = \frac{1}{M_{NIM}} \sum_i h_{NIM,i}^2$$  
+where $M_{NIM}$ denotes the total number of NIMs.
+
+To choose a background set of MH SNPs that match the NIMs in terms of their MAF and LD distribution, we would pick a given bin $i$ with probability $\frac{M_{NIM,i}}{M_{NIM}}$. The per-SNP heritability associated with this background set of MH SNPs is then given by:
+
+$$\sigma_{MH} = \sum_i \frac{\sigma_{MH,i}^2 M_{NIM,i}}{M_{NIM}}  = \frac{1}{M_{NIM}} \sum_i h_{MH,i}^2 \frac{M_{NIM,i}}{M_{MH,i}}$$ 
+
+Thus, we are interested in testing the null hypothesis that the per-NIM heritability is equal to the per-SNP heritability of the background set of MH SNPs.
+$$\sigma_{NIM}^2  - \sigma_{MH}^2  =0$$ 
+$$\Rightarrow \frac{1}{M_{NIM}}  \sum_i h_{NIM,i}^2 - \frac{1}{M_{NIM}} \sum_i h_{MH,i}^2 \frac{M_{NIM,i}}{M_{MH,i}} = 0$$
+$$\Rightarrow \sum_i h_{NIM,i}^2 - \sum_i \frac{M_{NIM,i}}{M_{MH,i}}h_{MH,i}^2 = 0 $$
+
+Defining our parameter of interest: $\Delta_{h^2} =\sum_i h_{NIM,i}^2  - \sum_i \frac{M_{NIM,i}}{M_{MH,i}}h_{MH,i}^2$ 
+our null  hypothesis is that $\Delta_{h^2} = 0$.
+
+We estimate the relative reduction in NIM heritability as:
+$$\delta_{h^2}  = \frac{\sigma_{NIM}^2-\sigma_{MH}^2}{\sigma_{MH}^2}$$
+$$= \frac{\sum_i h_{NIM,i}^2  - \sum_i \frac{M_{NIM,i}}{M_{MH,i}}h_{MH,i}^2}{\sum_i \frac{M_{NIM,i}}{M_{MH,i}}h_{MH,i}^2}$$
+
+
+

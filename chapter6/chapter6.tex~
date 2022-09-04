@@ -1,0 +1,67 @@
+\chapter{Impact of Neanderthal introgression on Binary Phenotypes}
+\section{Introduction}
+\scomment{Incomplete section. Move the }
+We previously examined the impact of both Neanderthal introgressed mutations (NIMs) and modern human specific fixed derived mutations (FDMs) on quantitative phenotypes. Our method allowed us to find associations of NIMs or FDMs with a number of these quantitative phenotypes, as well as determine enrichment or depletion of phenotypic variance due to these classes of mutations. While we were able to find significant signals in the quantitative phenotypes, a question remains on the impact of these classes of mutations on binary and categorical phenotypes. These phenotypes are of particular interest since they included disease diagnosis and other important biological traits. Here we examine the impact of NIMs and FDMs on 27 binary and categorical phenotypes.
+
+\section{Results}
+\subsection{The impact of NIMs on binary and categorical phenotypes}
+
+To understand how human specific mutations influence trait variation we first annotated 235,592 Neanderthal informative mutations (NIMs) in the UK biobank as described in previous chapter\ref{3.3.1}.  
+After determining our NIMs we examined 26 binary and categorical phenotypes . Some were categorical phenotypes that were binarized by splitting the phenotype into separate phenotypes 
+
+\section{Methods}
+\subsection{Binarization of Phenotypes}
+We tooks several categorical phenotypes and split them into seperate binary phenotypes
+\begin{verbatim}
+Balding > Balding 1,2,3,4
+\end{verbatim}
+\begin{verbatim}
+Vascular/heart_problems_diagnosed_by_doctor > HA_Angina_Stroke,
+\end{verbatim}
+\begin{verbatim}
+highBloodPressue
+\end{verbatim}
+or by removing some of the categories:
+\begin{verbatim}
+Bipolar_and_major_depression_status > recurrant_depression
+smoking_status > smoking(binarized)\end{verbatim}
+
+\begin{longtable}{@{}ll@{}}
+\toprule
+\textbf{fCode} & \textbf{Pheno}                                  \\* \midrule
+\endfirsthead
+%
+\endhead
+%
+\bottomrule
+\endfoot
+%
+\endlastfoot
+%
+f.1180.0.0     & Morning/evening\_person\_(chronotype)           \\
+f.20116.0.0    & Smoking\_status                                 \\
+f.20126.0.0    & Bipolar\_and\_major\_depression\_status         \\
+f.20127.0.0    & Neuroticism\_score                              \\
+f.20191.0.0    & Fluid\_intelligence\_score                      \\
+f.22127.0.0    & Doctor\_diagnosed\_asthma                       \\
+f.2395.0.0     & Hair/balding\_pattern                           \\
+f.2405.0.0     & Number\_of\_children\_fathered                  \\
+f.2443.0.0     & Diabetes\_diagnosed\_by\_doctor                 \\
+f.2714.0.0     & Age\_when\_periods\_started\_(menarche)         \\
+f.2734.0.0     & Number\_of\_live\_births                        \\
+f.2754.0.0     & Age\_at\_first\_live\_birth                     \\
+f.6150.0.0     & Vascular/heart\_problems\_diagnosed\_by\_doctor \\
+f.2395.0.0     & Balding1                                        \\
+f.2395.0.0     & Balding2                                        \\
+f.2395.0.0     & Balding3                                        \\
+f.2395.0.0     & Balding4                                        \\
+f.1180.0.0     & Chronotype                                      \\
+f.2443.0.0     & Diabetes                                        \\
+f.1717.0.0     & Skin\_colour                                    \\
+f.1727.0.0     & Ease\_of\_skin\_tanning                         \\
+f.1737.0.0     & Childhood\_sunburn\_occasions                   \\
+f.6150.0.0     & HA\_Angina\_Stroke                              \\
+f.6150.0.0     & highBloodPressure                               \\
+f.20126.0.0    & RecurrentDepression                             \\
+f.20116.0.0    & Smoking\_binarized                              \\* \bottomrule
+\end{longtable}\label{table}
