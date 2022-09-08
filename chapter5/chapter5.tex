@@ -14,9 +14,9 @@ We first examined how the evolutionary force of stabilizing selection impacted h
 We then examined how directional selection impacts NIM heritability in our simple demography. Directional selection occurs when selection favours the phenotype at one extreme of the range of phenotypes increasing the fitness of those individuals with phenotypes nearer to that extreme (\textbf{Fig \ref{fig:5.1} panel 1}). We used a previously published model of directional selection by Eyre-Walker et al. \cite{eyre2010genetic} in which SNP effect size $\beta$ and fitness ($S$) are coupled by a parameter Tau ($\tau$). We again performed forward in time simulations under our simple demography to calculate a NIM heritability Z-score. We saw no significant enrichment in NIM heritability.
 Finally we looked at how disruptive selection impacts NIM heritability in a disruptive selection setting. Disruptive selection occurs when extreme values for a trait are favored over intermediate values (\textbf{Fig \ref{fig:5.1} panel 3}). We based our simulation off a model from Zeng et al. that examines disruptive selection for a quantitative trait by relating the normally distributed phenotype ($y$) to fitness ($S$) through a hypothetical function. After performing simulations under our simple demography and modeling disruptive selection, we found no significant enrichment in NIM heritability Z-score. 
 \subsection{Modified models of stabilizing and directional selection present enriched NIM heritability}
-After we observed no enrichment of NIM heritability, we wanted to see if we modified the models by adjusting different parameters at different times in the Neanderthal introgression demography would allow us to see enrichment. We developed a model of stabilizing selection that relaxed the parameter of a constant QTL optima ($\omega$) at different stages in the evolutionary history. We created several different cases where the optima would shift at different branches of our demographic model following the split of modern humans and neanderthals. We defined $\omega_A$ as the optima in the shared common ancestors, and shifted the optima immediately after the split between humans ($\omega_H$) and Neanderthals ($\omega_{N}$) and immediatley after introgression into modern humans $\omega_{MH}$. We explored many different combinations of changing that parameters to be constant, have a positive or negative change in value, and/or a reversal in sign ($-\omega$) of the optima (\textbf{Fig \ref{fig:5.2}}). We found that a decrease in QTL optima value in the human population (Neanderthal optima unchanged) after the split between Neanderthals and modern humans produced an enrichment in NIM heritability (i.e. $\omega_A = \omega_N > \omega_H$ \textbf{Fig \ref{fig:5.2.1}}). Under this modified model of directional selection, we observed a positive NIM heritability Z-score indicating an enrichment of NIM heritability in our simulated phenotype.
+After we observed no enrichment of NIM heritability, we wanted to see if we modified the models by adjusting different parameters at different times in the Neanderthal introgression demography would allow us to see enrichment. We developed a model of stabilizing selection that relaxed the parameter of a constant QTL optima ($\omega$) at different stages in the evolutionary history. We created several different cases where the optima would shift at different branches of our demographic model following the split of modern humans and neanderthals. We defined $\omega_A$ as the optima in the shared common ancestors, and shifted the optima immediately after the split between humans ($\omega_H$) and Neanderthals ($\omega_{N}$) and immediatley after introgression into modern humans $\omega_{MH}$. We explored many different combinations of changing that parameters to be constant, have a positive or negative change in value, and/or a reversal in sign ($-\omega$) of the optima (\textbf{Fig \ref{fig:5.3}}). We found that a decrease in QTL optima value in the human population (Neanderthal optima unchanged) after the split between Neanderthals and modern humans produced an enrichment in NIM heritability (i.e. $\omega_A = \omega_N > \omega_H$ \textbf{Fig \ref{fig:5.3.1}}). Under this modified model of directional selection, we observed a positive NIM heritability Z-score indicating an enrichment of NIM heritability in our simulated phenotype \textbf{Fig \ref{fig:5.3.2}}.
 
-We next modified the previously stated model of directional selection that relaxed the assumption of a constant relationship between SNP effect size $\beta$ and fitness $S$ throughout an evolutionary history. In the previous model, $\beta$ and $S$ are coupled through a parameter $\tau$, quantifying the relationship between the two. In our modified model, we allowed for the value of $\tau$ to change before ($\tau_a$) and immediately after ($\tau_i$) introgression (\textbf{Fig \ref{fig:5.4}}). We found that a reduction in the value of the initial coupling parameter ($\tau_a$) to a smaller value after introgression ($\tau_i$) produces a positive NIM heritability Z-score (i.e. $\tau_a > \tau_i$). This positive NIM heritability Z-score again indicates that under this specific evolutionary scenario, we observe an enrichment of NIM heritability in our simulated phenotype.
+We next modified the previously stated model of directional selection that relaxed the assumption of a constant relationship between SNP effect size $\beta$ and fitness $S$ throughout an evolutionary history. In the previous model, $\beta$ and $S$ are coupled through a parameter $\tau$, quantifying the relationship between the two. In our modified model, we allowed for the value of $\tau$ to change before ($\tau_a$) and immediately after ($\tau_i$) introgression (\textbf{Fig \ref{fig:5.4} and \ref{fig:5.5}}). We found that a reduction in the value of the initial coupling parameter ($\tau_a$) to a smaller value after introgression ($\tau_i$) produces a positive NIM heritability Z-score (i.e. $\tau_a > \tau_i$) (\textbf{Fig \ref{fig:5.5.1}}). This positive NIM heritability Z-score again indicates that under this specific evolutionary scenario, we observe an enrichment of NIM heritability in our simulated phenotype.
 
 We repeated these experiments under a more realistic demography than our simple demographic model based on parameters from a previously published model by Harris and Neilson \cite{harris2016genetic}. In this model, there is a development of genetic background in a common ancestor for a number of generations, a split between neanderthals and modern humans, a second split within modern humans simulating the out of Africa movement, followed immediately by introgression into a non-African population (\textbf{Fig \ref{fig:5.3}}). Under this more realistic model, both results of NIM heritability enrichment in our modified directional and selection models persist. Lastly, we explored variations in several demographic parameters to observe how they may impact NIM heritability. We simulated models in which there is (1) changes in values of effective population sizes of Neanderthals or modern humans (2) changes in genomic element size (3) changes in admixture proportion and (4) changes in causal variant proportion. In all of these demographic models, we observe no significant enrichment of NIM heritability. 
 
@@ -54,7 +54,8 @@ We used this model of fitness and effect size in the simulation mentioned in sec
 
 \subsection{Realistic demographic model}
 We created a more realistic demographic model to simulate Neanderthal introgression into modern humans based on a model previously published by Harris and Neilson \cite{harris2016genetic}. We used SLiM 3.0 \cite{haller2019slim} to run a forward in time simulations in a normally distributed phenotype with quantitative trait loci. The mutation rate was set to $10^{-8}$ and the chromosome size was set to 100kb with neutral and QTL mutations occurring at equal proportions with a rate of $10{-8}$. In our model we begin with an ancestral population size of $N_A = 10,000$ and allowed this population to burn in for 70,000 generations. From here, we had the population split into two separate sized populations of humans ($N_H = 10,000$) and Neanderhtals ($N_N = 1,000$). These two populations randomly mated separately for 17,800 generations followed followed by a splitting of modern humans into two equal sized populations of Africans ($N_{AFR} = 10,000$) and Europeans ($N_{EUR} = 10,000$). One generation after the split, there was an introgression event of $10\%$. Finally, modern humans evolved for another 2,200 generations and effect sizes of QTLs were observed. We used this model to simulate the same forces of selection in previous sections. 
-
+\section{Discussion}
+Our research provides new insights into how selective forces acting act upon genomes in an introgressed demographic setting may affect genetic architecture of modern human and Neanderthal population. Looking at data from both architectures, through neanderthal introgressed DNA, allows us to determine what selective forces might be acting upon a population. We can  compare and contrast phenotypic variance values and compare them to simulated evolutionary models to determine how these architectures came to be. 
 \newpage
 \section{Figures}
 
@@ -78,7 +79,18 @@ We created a more realistic demographic model to simulate Neanderthal introgress
     \caption{Simple demographic model - stabilizing selection}
     \label{fig:5.3}
 \end{figure}
-
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter5/figures/fig5.3.1}.png}
+    \caption{Modified stabilizing selection model}
+    \label{fig:5.3.1}
+\end{figure}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter5/figures/fig5.3.2}.png}
+    \caption{Modified stabilizing selection model produces positive NIM heritability Z-scores}
+    \label{fig:5.3.2}
+\end{figure}
 \begin{figure}[htb]
     \centering
     \includegraphics[width=\textwidth]{{chapter5/figures/fig5.4}.png}
@@ -89,6 +101,12 @@ We created a more realistic demographic model to simulate Neanderthal introgress
 \begin{figure}[htb]
     \centering
     \includegraphics[width=\textwidth]{{chapter5/figures/fig5.5}.png}
-    \caption{Realistic demographic model - directional selection}
+    \caption{Directional selection - modified model}
     \label{fig:5.5}
+\end{figure}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter5/figures/fig5.5.1}.png}
+    \caption{Modified directional selection model produces NIM heritability Z-scores}
+    \label{fig:5.5.1}
 \end{figure}
