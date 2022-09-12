@@ -5,5 +5,6 @@
 \contentsline {table}{\numberline {2.3}{\ignorespaces summary of variants discovered per chromosome. Novel variants are the subset of variants with minor allele count $(MAC) \ge 10$ in the current study that are also monomorphic or not reported in 1KG (phase 3), 1KG EAS, or 1KG CHB+CHS populations.\relax }}{13}{table.caption.6}
 \addvspace {10pt}
 \addvspace {10pt}
-\addvspace {10pt}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Confident-credible FDMs and their associations with phenotypes\relax }}{69}{table.caption.26}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Confident FDMs and their functional effect on genes\relax }}{70}{table.caption.27}
 \addvspace {10pt}

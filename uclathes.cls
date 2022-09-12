@@ -683,7 +683,7 @@
 \@namedef{table*}{\@tablestrue\@dblfloat{table}}
 \@namedef{endtable*}{\end@dblfloat}
 
-
+
 %    ****************************************
 %    *            PAGE STYLES               *
 %    ****************************************
@@ -750,7 +750,7 @@
 \def\@oddfoot{}\def\@evenhead{\rm \thepage\hfil\slshape\leftmark\hbox {}}%
 \def\@evenfoot{}\def\sectionmark##1{}\def\subsectionmark##1{}}
 
-
+
 %    ****************************************
 %    *            MISCELLANEOUS             *
 %    ****************************************

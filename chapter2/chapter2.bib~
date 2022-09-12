@@ -1,0 +1,162 @@
+@article{kim2015selection,
+  title={Selection and reduced population size cannot explain higher amounts of Neandertal ancestry in East Asian than in European human populations},
+  author={Kim, Bernard Y and Lohmueller, Kirk E},
+  journal={The American Journal of Human Genetics},
+  volume={96},
+  number={3},
+  pages={454--461},
+  year={2015},
+  publisher={Elsevier}
+}
+ 
+@article{cai2015sparse,
+  title={Sparse whole-genome sequencing identifies two loci for major depressive disorder},
+  author={Cai, Na and Bigdeli, Tim B and Kretzschmar, Warren and Li, Yihan and Liang, Jieqin and Song, Li and Hu, Jingchu and Li, Qibin and Jin, Wei and Hu, Zhenfei and others},
+  journal={Nature},
+  volume={523},
+  number={7562},
+  pages={588--591},
+  year={2015},
+  publisher={Nature Publishing Group}
+}
+@article{haller2019slim,
+  title={SLiM 3: forward genetic simulations beyond the Wright--Fisher model},
+  author={Haller, Benjamin C and Messer, Philipp W},
+  journal={Molecular biology and evolution},
+  volume={36},
+  number={3},
+  pages={632--637},
+  year={2019},
+  publisher={Oxford University Press}
+}
+
+@article{zeng2018signatures,
+  title={Signatures of negative selection in the genetic architecture of human complex traits},
+  author={Zeng, Jian and De Vlaming, Ronald and Wu, Yang and Robinson, Matthew R and Lloyd-Jones, Luke R and Yengo, Loic and Yap, Chloe X and Xue, Angli and Sidorenko, Julia and McRae, Allan F and others},
+  journal={Nature genetics},
+  volume={50},
+  number={5},
+  pages={746--753},
+  year={2018},
+  publisher={Nature Publishing Group}
+}
+
+@article{harris2016genetic,
+  title={The genetic cost of Neanderthal introgression},
+  author={Harris, Kelley and Nielsen, Rasmus},
+  journal={Genetics},
+  volume={203},
+  number={2},
+  pages={881--891},
+  year={2016},
+  publisher={Oxford University Press}
+}
+
+@article{wei2022lingering,
+  title={The lingering effects of Neanderthal introgression on human complex traits},
+  author={Wei, Xinzhu and Robles, Christopher R and Pazokitoroudi, Ali and Ganna, Andrea and Gusev, Alexander and Durvasula, Arun and Gazal, Steven and Loh, Po-Ru and Reich, David and Sankararaman, Sriram},
+  journal={bioRxiv},
+  year={2022},
+  publisher={Cold Spring Harbor Laboratory}
+}
+
+@article{boomsma2014genome,
+  title={The Genome of the Netherlands: design, and project goals},
+  author={Boomsma, Dorret I and Wijmenga, Cisca and Slagboom, Eline P and Swertz, Morris A and Karssen, Lennart C and Abdellaoui, Abdel and Ye, Kai and Guryev, Victor and Vermaat, Martijn and Van Dijk, Freerk and others},
+  journal={European Journal of Human Genetics},
+  volume={22},
+  number={2},
+  pages={221--227},
+  year={2014},
+  publisher={Nature Publishing Group}
+}
+
+@article{gudbjartsson2015large,
+  title={Large-scale whole-genome sequencing of the Icelandic population},
+  author={Gudbjartsson, Daniel F and Helgason, Hannes and Gudjonsson, Sigurjon A and Zink, Florian and Oddson, Asmundur and Gylfason, Arnaldur and Besenbacher, Soren and Magnusson, Gisli and Halldorsson, Bjarni V and Hjartarson, Eirikur and others},
+  journal={Nature genetics},
+  volume={47},
+  number={5},
+  pages={435--444},
+  year={2015},
+  publisher={Nature Publishing Group}
+}
+
+@article{sidore2015genome,
+  title={Genome sequencing elucidates Sardinian genetic architecture and augments association analyses for lipid and blood inflammatory markers},
+  author={Sidore, Carlo and Busonero, Fabio and Maschio, Andrea and Porcu, Eleonora and Naitza, Silvia and Zoledziewska, Magdalena and Mulas, Antonella and Pistis, Giorgio and Steri, Maristella and Danjou, Fabrice and others},
+  journal={Nature genetics},
+  volume={47},
+  number={11},
+  pages={1272--1281},
+  year={2015},
+  publisher={Nature Publishing Group}
+}
+
+@article{li2011low,
+  title={Low-coverage sequencing: implications for design of complex trait association studies},
+  author={Li, Yun and Sidore, Carlo and Kang, Hyun Min and Boehnke, Michael and Abecasis, Gon{\c{c}}alo R},
+  journal={Genome research},
+  volume={21},
+  number={6},
+  pages={940--951},
+  year={2011},
+  publisher={Cold Spring Harbor Lab}
+}
+
+@misc{cai201711,
+  title={11,670 whole-genome sequences representative of the Han Chinese population from the CONVERGE project. Sci. Data 4: 170011},
+  author={Cai, N and Bigdeli, TB and Kretzschmar, WW and Li, Y and Liang, J and Hu, J and Peterson, RE and Bacanu, S and Webb, BT and Riley, B and others},
+  year={2017}
+}
+
+@article{yang2011gcta,
+  title={GCTA: a tool for genome-wide complex trait analysis},
+  author={Yang, Jian and Lee, S Hong and Goddard, Michael E and Visscher, Peter M},
+  journal={The American Journal of Human Genetics},
+  volume={88},
+  number={1},
+  pages={76--82},
+  year={2011},
+  publisher={Elsevier}
+}
+@article{genome2014whole,
+  title={Whole-genome sequence variation, population structure and demographic history of the Dutch population},
+  journal={Nature genetics},
+  volume={46},
+  number={8},
+  pages={818--825},
+  year={2014},
+  publisher={Nature Publishing Group US New York}
+}
+@article{walter526management,
+  title={Management committee (2015). The UK10K project identifies rare variants in health and disease},
+  author={Walter, K and Min, JL and Huang, J and Crooks, L and Memari, Y and McCarthy, S and Perry, JRB and Xu, C and Futema, M and Lawson, D and others},
+  journal={Nature},
+  volume={526},
+  number={7571},
+  pages={82--90},
+  year={2015}
+}
+@article{lek2016analysis,
+  title={Analysis of protein-coding genetic variation in 60,706 humans},
+  author={Lek, Monkol and Karczewski, Konrad J and Minikel, Eric V and Samocha, Kaitlin E and Banks, Eric and Fennell, Timothy and O’Donnell-Luria, Anne H and Ware, James S and Hill, Andrew J and Cummings, Beryl B and others},
+  journal={Nature},
+  volume={536},
+  number={7616},
+  pages={285--291},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+
+
+@article{boomsma2014genome,
+  title={The Genome of the Netherlands: design, and project goals},
+  author={Boomsma, Dorret I and Wijmenga, Cisca and Slagboom, Eline P and Swertz, Morris A and Karssen, Lennart C and Abdellaoui, Abdel and Ye, Kai and Guryev, Victor and Vermaat, Martijn and Van Dijk, Freerk and others},
+  journal={European Journal of Human Genetics},
+  volume={22},
+  number={2},
+  pages={221--227},
+  year={2014},
+  publisher={Nature Publishing Group}
+}

@@ -1,6 +1,6 @@
 \chapter{Impact of human specific variants on modern human biology}
 \section{Introduction}
-Uncovering genetic changes that make anatomically modern humans “unique” is critical for a comprehensive understanding of human evolution. Recent genomic advantages have began to elucidate the nuances of human evolution and how humankind relates to some of our closest hominid relatives. These advances are starting to reveal how intermixing between species has shaped modern human biology. Research has been done examining how regions of DNA that have been passed into homosapiens from our closest relatives, suggesting that some of this introgressed DNA may be adaptively beneficial or undergoing negative selection. On the other hand, there have been studies showing variant regions of DNA that are human-specific, or lacking in our closest relatives, suggesting that these mutations may have been important in developing modern human biology. 
+Uncovering genetic changes that make anatomically modern humans {\em unique} is critical for a comprehensive understanding of human evolution. Recent genomic advances have began to elucidate the nuances of human evolution and how humankind relates to some of our closest hominid relatives. These advances are starting to reveal how intermixing between species has shaped modern human biology. Research has been done examining how regions of DNA that have been passed into homosapiens from our closest relatives, suggesting that some of this introgressed DNA may be adaptively beneficial or undergoing negative selection. On the other hand, there have been studies showing variant regions of DNA that are human-specific, or lacking in our closest relatives, suggesting that these mutations may have been important in developing modern human biology. 
 %Some studies show (**add examples, foxp2,etc). 
 One study uses ancestral recombination graphs to determine regions of the genome that are uniquely human \cite{schaefer2021ancestral}. 
 Another study used massively parallel reporter assays to look at regulatory effects of modern human specific variants \cite{weiss2021cis} in embryonic stem cells, neural progenitor cells, and bone osteoblasts finding (13\%) of sequences containing these variants showed active regulatory activity, and (23\%) of these drove differential expression between human groups. However, there hasn't been a comprehensive analysis determining and analysing the effect these mutations have on a broad range of human traits.
@@ -9,12 +9,12 @@ By analyzing genome sequences from our closest evolutionary relatives, Neanderth
 To understand the phenotypic impact of these fixed derived mutations (FDMs), we leverage the observation that interbreeding with Neanderthals likely re-introduced the ancestral allele at a number of these sites. We estimate that $~39\%$ of FDMs are polymorphic in European populations so that their phenotypic impact can be analyzed by genotyping these mutations in large cohorts with phenotypic information. These Fixed Derived alleles (FDs) are mutations that rise to high frequency  in  modern  humans  since  the  split  from  archaic humans, and may give us clues to the biology that cause modern humans to differ from our closest relatives.
 \section{Results}
 \subsection{Identifying genomic regions at which fixed derived mutations influence phenotypes}
-To understand how human specific mutations influence trait variation we first annotated the fixed derived mutations in the UK biobank. One approach we can use is to look at genetic components of traits that modern humans share, and our archaic relatives, such as the Neanderthal, don’t. In other words, we wanted to identify derived mutations in the modern human genome that differed from our ancient relatives, and rose to high frequency. These mutations occur after modern humans split from Archaic individuals such as Neanderthals, and then rise to a high frequency in modern humans. In order to overcome the problem of these mutations becoming fixed, or at nearly 100 \% allele frequency, we leverage the fact that introgression may have reintroduced variation into these mutations in European individuals (Fig 1). We first identified  25,448 (50,505) mutations that were $>99\% (>95\%)$ for the derived allele in 1000 genomes phase 3 African populations and ancestral in the Altai Neanderthal or Denisovan and deemed Fixed Derived mutations. These mutations are heterozygous in a number of White British individuals in the UK Biobank (\ref{fig:4.2} \ref{fig:4.3}). After identifying the $FDMs >99\%$, we used plink2 to run GLM on 96 phenotypes to find 464 FDMs associated with 39 phenotypes at a p-value threshold of $p<10^{-10}$.  For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$. After clumping analysis we find 70 independent associations of the 39 phenotypes.
-We repeated clumping analysis on $FDMs > 95\%$ and found 1457 FDM-phenotype associations over 67 phenotypes \ref{fig:4.4}. We find that FDMs are associated with a wide range of phenotypic categories including Antopomery, Blood-related, Bone Density, Metabolism, Kidney, Liver, Lung, Skin and Hair phenotypes. 
+To understand how human specific mutations influence trait variation we first annotated the fixed derived mutations in the UK biobank. One approach we can use is to look at genetic components of traits that modern humans share, and our archaic relatives, such as the Neanderthal, don’t. In other words, we wanted to identify derived mutations in the modern human genome that differed from our ancient relatives, and rose to high frequency. These mutations occur after modern humans split from Archaic individuals such as Neanderthals, and then rise to a high frequency in modern humans. In order to overcome the problem of these mutations becoming fixed, or at nearly 100 \% allele frequency, we leverage the fact that introgression may have reintroduced variation into these mutations in European individuals (Figure~\ref{fig:4.1}). We first identified  25,448 (50,505) mutations that were $>99\% (>95\%)$ for the derived allele in 1000 genomes phase 3 African populations and ancestral in the Altai Neanderthal or Denisovan and deemed Fixed Derived mutations (FD99 and FD95). These mutations are heterozygous in a number of White British individuals in the UK Biobank (\ref{fig:4.2} \ref{fig:4.3}). After identifying the $FDMs >99\%$, we used plink2 to run GLM on 96 phenotypes to find 464 FDMs associated with 39 phenotypes at a p-value threshold of $p<10^{-10}$.  For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$. After clumping analysis we find 70 independent FD99-phenotype associations of the 39 phenotypes.
+We repeated clumping analysis on $FDMs > 95\%$ and found 1457 FD95-phenotype associations over 67 phenotypes (Figure~\ref{fig:4.4}). We find that FDMs are associated with a wide range of phenotypic categories including Anthropomery, Blood-related, Bone Density, Metabolism, Kidney, Liver, Lung, Skin and Hair phenotypes. 
 \subsection{Finemapping and functional annotation of FDMs}
-We then performed our finemapping protocol as referenced in the previous section \ref{3.3.1}. Our pipeline starts with a subset of significantly associated FDMs that are relatively independent $(p < 10^{-10})$ followed by the application of a statistical fine-mapping method (SuSiE) within the 200kb window around each NIM signal (Wang 2020) and additional post-processing to obtain a set of NIMs that have an increased probability of being causal for a trait. In our post processing step, we removed the credible regions that have >50\% non-FDMs in their credible set. The remaining credible sets all have majority FDMs (i.e. positive results), and they are further merged together with other such regions it overlaps with, resulting in distinct regions with evidence of FDMs causal effects. We termed the set of all resulting FDMs as the confident-credible FDM set and all FDMs that lie in the credible set as credible FDMs. There were two confident-credible FDM sets containing 11 confident-credible FDMs that associated with 6 phenotypes \ref{tab:4.1}. The first confident-credible FDM set region (chr1:161378366-161579657) was associated with gamma-glutamyl transferase (GGT) and contained 5 confident-credible FDMs associated with GGT and Aspartate aminotransferase. The second confident-credible FDM set region (chr12:56764867-56967108) was associated with albumin, urea, and urate and contained 3 confident credible FDMs that were associated with all three phenotypes. 
-We then sought to determine functional effect of the confident credible FDMs. We  first looked at genes nearby to our loci of interest and found that our first locus (chr1:161378366-161579657) was in proximity to FCGR2A and RP11-25K21.6 genes \ref{fig:4.5}. We looked at functional effects of our specific FDMs, however found that they were downstream and upstream gene variants of the two genes respectively \ref{tab:4.2}. The FCGR2A codes for a receptor in many immune cells, such as macrophages and neutrophils, and is involved in the process of phagocytosis and clearing of immune complexes. Interestingly, this gene was also found to be of importance in our previous chapter. 
-We next looked at the locus in chromosome 12 (chr12:56764867-56967108) and found that it was in close proximity to SPRYD4 and GLS2 genes. One study shows that SPRY-domain containing protein 4 (SPRYD4) inhibits tumor progression in hepatocellular carcinoma by inducing apoptotic cell death \cite{zahid2019novel}. The SPRY-domain has been proposed to act as a protein-interaction module that is present in multiple proteins with diverse functions in different biological processes. Mutations in SPRY domain-containing genes have been reported in diseases like Opitz syndrome and familial Mediterranean fever, but as yet limited information is available on their association with the onset and progression of cancer. 
+We then applied our finemapping protocol as referenced in the Section~\ref{3.3.1}. Our pipeline starts with a subset of significantly associated FDMs that are relatively independent $(p < 10^{-10})$ followed by the application of a statistical fine-mapping method (SuSiE) within the 200kb window around each NIM signal (Wang 2020) and additional post-processing to obtain a set of NIMs that have an increased probability of being causal for a trait. In our post processing step, we removed the credible regions that have >50\% non-FDMs in their credible set. The remaining credible sets all have majority FDMs (i.e. positive results), and they are further merged together with other such regions it overlaps with, resulting in distinct regions with evidence of FDMs causal effects. We termed the set of all resulting FDMs as the confident-credible FDM set and all FDMs that lie in the credible set as credible FDMs. There were two confident-credible FDM sets containing 11 confident-credible FDMs that associated with 6 phenotypes (Table~\ref{tab:4.1}). The first confident-credible FDM set region (chr1:161378366-161579657) was associated with gamma-glutamyl transferase (GGT) and contained 5 confident-credible FDMs associated with GGT and Aspartate aminotransferase. The second confident-credible FDM set region (chr12:56764867-56967108) was associated with albumin, urea, and urate and contained 3 confident credible FDMs that were associated with all three phenotypes. 
+We then sought to determine functional effect of the confident credible FDMs. We  first looked at genes nearby to our loci of interest and found that our first locus (chr1:161378366-161579657) was in proximity to FCGR2A and RP11-25K21.6 genes (Figure~\ref{fig:4.5}). We looked at functional effects of our specific FDMs, however found that they were downstream and upstream gene variants of the two genes respectively \ref{tab:4.2}. The FCGR2A codes for a receptor in many immune cells, such as macrophages and neutrophils, and is involved in the process of phagocytosis and clearing of immune complexes. Interestingly, this gene was also found to be of importance in our previous chapter. 
+We next looked at the locus in chromosome 12 (chr12:56764867-56967108) and found that it was in close proximity to SPRYD4 and GLS2 genes (Figure~\ref{fig:4.6}). One study shows that SPRY-domain containing protein 4 (SPRYD4) inhibits tumor progression in hepatocellular carcinoma by inducing apoptotic cell death \cite{zahid2019novel}. The SPRY-domain has been proposed to act as a protein-interaction module that is present in multiple proteins with diverse functions in different biological processes. Mutations in SPRY domain-containing genes have been reported in diseases like Opitz syndrome and familial Mediterranean fever, but as yet limited information is available on their association with the onset and progression of cancer. The GLS2 encodes a protein that regulates the metabolism of glutamine, a regulatory process that activates white blood cells. One study shows that variation in GLS2 is associated with development of complicated Staphylococcus aureus bacteremia \cite{scott2018human}. Another study shows that the GLS2 also has tumor suppression activity in human hepatocellular carcinoma \cite{liu2014glutaminase} similar to SPRYD4 gene. Theses genes are in close proximity providing an example of a region that potentially impacts function at multiple genes. 
 %%%****FIX THIS LATER once we have heritability
 % \subsection{The contribution of FDMs to trait heritability}
 % To understand the contribution of human specific  variants to trait variation, we aim to estimate the proportion of phenotypic variance attributed to FDMs (FDMs heritability) and to test the null hypothesis that per-FDM heritability is the same as the heritability of a non-human specific SNP (MH) SNP. 
@@ -47,8 +47,8 @@ We annotated all unique credible FDMs using SnpEff \cite{cingolani2012program} w
 
 % The standard errors (s.e.) of these statistics are computed using 100 jackknife blocks using an extension of RHE-mc that takes into account the covariance among different annotations. This new version of the RHE-mc is now available at https://github.com/alipazokit/RHEmc-coeff.
 \section{Discussion}
-Our research shows that we are able to use the effect of Neanderthal introgression on the modern human genome to find a signal of human specific mutations that have nearly become fixed in certain modern humans populations. We present a new method able to find these fixed derived mutations and exploit their heterozygosity in Europeans to discover a signal of association in a wide range of phenotypes. We also use our fine mapping pipeline to discover two regions of the genome that are confidently fixed-derived and have associations with a number a phenotypes. We find that the two regions are in close proximity to genes that are related to immunity suggesting that these regions may have importance in development of immune response in modern humans. 
-One limitation of our study is that many regions containing significantly associated FDMS were removed potentially due to the limited power of our procedure that aims to control the FDR. Our current ongoing work involves fine-tuning our procedure to determine if can more accurately represent what is defined at "fixed derived" and not fixed derived. One approach is to run evolutionary simulations to determine how the genetic architecture of these variants may look under a demography representing introgressed DNA and fixation of varaints in homosapiens, however further research is needed.
+Our research shows that we are able to use the effect of Neanderthal introgression on the modern human genome to determine how fixed derived mutations impact modern human phenotypes. We present a new pipeline able to identify these fixed derived mutations and exploit their heterozygosity in Europeans to determine a signal of association in a wide range of phenotypes. We also use our fine mapping pipeline to discover two regions of the genome that are confidently fixed-derived and have associations with a number of phenotypes. We find that the two regions are in close proximity to genes that are related to immunity suggesting that these regions may have importance in development of immune response in modern humans, thus leading to fixation. In addition, literature review of the two genes in one of the regions are related to tumor suppression activity in human hepatocellular carcinoma, which is interesting considering the relationship between cancers and the immune response. 
+One limitation of our study is that many regions containing significantly associated FDMs were removed potentially due to the limited power of our procedure that aims to control the FDR. Our current ongoing work involves fine-tuning our procedure to determine if can more accurately represent what is defined as ``fixed derived''. One approach is to run evolutionary simulations to determine how the genetic architecture of these variants may evolve under a demography representing neanderthal introgressed DNA and fixation of variants. We can then fine tune the parameters of our pipeline of what levels of frequency might be needed to be considered ``fixed'' in African populations. Further work is also needed to determine the effect these fixed derived mutations have on heritability of modern human phenotypes. 
 \newpage
 \FloatBarrier
 \section{Figures}
@@ -61,7 +61,7 @@ One limitation of our study is that many regions containing significantly associ
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/FDMS.99.af.png}
+    \includegraphics[width=\textwidth]{{chapter4/figures/FDMS.99.af}.png}
     \caption{European MAF for mutations that were $>99\%$ for the derived allele in 1000 genomes phase 3 African population.}
     \label{fig:4.2}
 \end{figure}
@@ -74,36 +74,36 @@ One limitation of our study is that many regions containing significantly associ
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/FDs.95.sig.assoc.png}
-    \caption{Number of Significant FDMs by Phenotypic category. Each dot in a category represents a unique phenotype.}
+    \includegraphics[width=\textwidth]{{chapter4/figures/FDs.95.sig.assoc}.png}
+    \caption{Number of FDMs (FD95) significantly associated with phenotypes grouped by Phenotypic category. Each dot in a category represents a unique phenotype.}
     \label{fig:4.4}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/chr1.conffd.locuszoom.png}
-    \caption{Zoomed in view of the confident credible FDM region in chr1}
+    \includegraphics[width=\textwidth]{{chapter4/figures/chr1.conffd.locuszoom}.png}
+    \caption{Zoomed in view of the confident credible FDM (FD95) region on chromosome 1}
     \label{fig:4.5}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{chapter4/figures/chr12.conffd.locuszoom.png}
-    \caption{Zoomed in view of the confident credible FDM region in chr12}
+    \includegraphics[width=\textwidth]{{chapter4/figures/chr12.conffd.locuszoom}.png}
+    \caption{Zoomed in view of the confident credible FDM (FD95) region on chromosome 12}
     \label{fig:4.6}
 \end{figure}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=\textwidth]{{chapter4/figures/Z_nim_mh_category}.pdf}
-    \caption{Difference in heritability of FDMs vs modern humans by phenotype and category}
-    \label{fig:4.7}
-\end{figure}
+%\begin{figure}[htb]
+%    \centering
+%    \includegraphics[width=\textwidth]{{chapter4/figures/Z_nim_mh_category}.pdf}
+%    \caption{Difference in heritability of FDMs vs modern humans by phenotype and category}
+%    \label{fig:4.7}
+%\end{figure}
 \FloatBarrier
 
 
 \section{Tables}
-\begin{table}[]
+\begin{table}[htb]
 \begin{tabular}{lllllll}
 \textbf{CHR} & \textbf{POS} & \textbf{REF} & \textbf{A1} & \textbf{BETA} & \textbf{P} & \textbf{Phenotype} \\
 12 & 56863770  & G & C & 0.0312767  & 1.69E-18 & albumin           \\
@@ -132,7 +132,7 @@ One limitation of our study is that many regions containing significantly associ
 \label{tab:4.1}
 \end{table}
 
-\begin{table}[]
+\begin{table}[htb]
 \begin{tabular}{llllllll}
 \textbf{CHR} & \textbf{POS} & \textbf{REF} & \textbf{ALT} & \textbf{Annotaion}  & \textbf{Gene}  \\
 1  & 161476533 & T & C & downstream\_gene\_variant &  FCGR2A \\

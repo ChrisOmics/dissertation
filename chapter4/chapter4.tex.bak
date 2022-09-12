@@ -1,0 +1,149 @@
+\chapter{Impact of human specific variants on modern human biology}
+\section{Introduction}
+Uncovering genetic changes that make anatomically modern humans “unique” is critical for a comprehensive understanding of human evolution. Recent genomic advantages have began to elucidate the nuances of human evolution and how humankind relates to some of our closest hominid relatives. These advances are starting to reveal how intermixing between species has shaped modern human biology. Research has been done examining how regions of DNA that have been passed into homosapiens from our closest relatives, suggesting that some of this introgressed DNA may be adaptively beneficial or undergoing negative selection. On the other hand, there have been studies showing variant regions of DNA that are human-specific, or lacking in our closest relatives, suggesting that these mutations may have been important in developing modern human biology. 
+%Some studies show (**add examples, foxp2,etc). 
+One study uses ancestral recombination graphs to determine regions of the genome that are uniquely human \cite{schaefer2021ancestral}. 
+Another study used massively parallel reporter assays to look at regulatory effects of modern human specific variants \cite{weiss2021cis} in embryonic stem cells, neural progenitor cells, and bone osteoblasts finding (13\%) of sequences containing these variants showed active regulatory activity, and (23\%) of these drove differential expression between human groups. However, there hasn't been a comprehensive analysis determining and analysing the effect these mutations have on a broad range of human traits.
+By analyzing genome sequences from our closest evolutionary relatives, Neanderthals and Denisovans, we can functionally characterize these genetic changes. Towards this end, we identified 50,505 mutations that are nearly fixed for the derived allele in African individuals from the 1000 Genomes project ($>99\%$ derived allele frequency) but are absent in all of the deeply sequenced Altai and Vindija Neanderthal and Denisovan genomes. Here we look at some of these human specific regions and how they impact modern human phenotypes.
+
+To understand the phenotypic impact of these fixed derived mutations (FDMs), we leverage the observation that interbreeding with Neanderthals likely re-introduced the ancestral allele at a number of these sites. We estimate that $~39\%$ of FDMs are polymorphic in European populations so that their phenotypic impact can be analyzed by genotyping these mutations in large cohorts with phenotypic information. These Fixed Derived alleles (FDs) are mutations that rise to high frequency  in  modern  humans  since  the  split  from  archaic humans, and may give us clues to the biology that cause modern humans to differ from our closest relatives.
+\section{Results}
+\subsection{Identifying genomic regions at which fixed derived mutations influence phenotypes}
+To understand how human specific mutations influence trait variation we first annotated the fixed derived mutations in the UK biobank. One approach we can use is to look at genetic components of traits that modern humans share, and our archaic relatives, such as the Neanderthal, don’t. In other words, we wanted to identify derived mutations in the modern human genome that differed from our ancient relatives, and rose to high frequency. These mutations occur after modern humans split from Archaic individuals such as Neanderthals, and then rise to a high frequency in modern humans. In order to overcome the problem of these mutations becoming fixed, or at nearly 100 \% allele frequency, we leverage the fact that introgression may have reintroduced variation into these mutations in European individuals (Figure~\ref{fig:4.1}). We first identified  25,448 (50,505) mutations that were $>99\% (>95\%)$ for the derived allele in 1000 genomes phase 3 African populations and ancestral in the Altai Neanderthal or Denisovan and deemed Fixed Derived mutations. These mutations are heterozygous in a number of White British individuals in the UK Biobank (\ref{fig:4.2} \ref{fig:4.3}). After identifying the $FDMs >99\%$, we used plink2 to run GLM on 96 phenotypes to find 464 FDMs associated with 39 phenotypes at a p-value threshold of $p<10^{-10}$.  For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$. After clumping analysis we find 70 independent associations of the 39 phenotypes.
+We repeated clumping analysis on $FDMs > 95\%$ and found 1457 FDM-phenotype associations over 67 phenotypes (Figure~\ref{fig:4.4}). We find that FDMs are associated with a wide range of phenotypic categories including Antopomery, Blood-related, Bone Density, Metabolism, Kidney, Liver, Lung, Skin and Hair phenotypes. 
+\subsection{Finemapping and functional annotation of FDMs}
+We then applied our finemapping protocol as referenced in the Section~\ref{3.3.1}. Our pipeline starts with a subset of significantly associated FDMs that are relatively independent $(p < 10^{-10})$ followed by the application of a statistical fine-mapping method (SuSiE) within the 200kb window around each NIM signal (Wang 2020) and additional post-processing to obtain a set of NIMs that have an increased probability of being causal for a trait. In our post processing step, we removed the credible regions that have >50\% non-FDMs in their credible set. The remaining credible sets all have majority FDMs (i.e. positive results), and they are further merged together with other such regions it overlaps with, resulting in distinct regions with evidence of FDMs causal effects. We termed the set of all resulting FDMs as the confident-credible FDM set and all FDMs that lie in the credible set as credible FDMs. There were two confident-credible FDM sets containing 11 confident-credible FDMs that associated with 6 phenotypes (Table~\ref{tab:4.1}). The first confident-credible FDM set region (chr1:161378366-161579657) was associated with gamma-glutamyl transferase (GGT) and contained 5 confident-credible FDMs associated with GGT and Aspartate aminotransferase. The second confident-credible FDM set region (chr12:56764867-56967108) was associated with albumin, urea, and urate and contained 3 confident credible FDMs that were associated with all three phenotypes. 
+We then sought to determine functional effect of the confident credible FDMs. We  first looked at genes nearby to our loci of interest and found that our first locus (chr1:161378366-161579657) was in proximity to FCGR2A and RP11-25K21.6 genes (Figure~\ref{fig:4.5}). We looked at functional effects of our specific FDMs, however found that they were downstream and upstream gene variants of the two genes respectively \ref{tab:4.2}. The FCGR2A codes for a receptor in many immune cells, such as macrophages and neutrophils, and is involved in the process of phagocytosis and clearing of immune complexes. Interestingly, this gene was also found to be of importance in our previous chapter. 
+We next looked at the locus in chromosome 12 (chr12:56764867-56967108) and found that it was in close proximity to SPRYD4 and GLS2 genes (Figure~\ref{fig:4.6}). One study shows that SPRY-domain containing protein 4 (SPRYD4) inhibits tumor progression in hepatocellular carcinoma by inducing apoptotic cell death \cite{zahid2019novel}. The SPRY-domain has been proposed to act as a protein-interaction module that is present in multiple proteins with diverse functions in different biological processes. Mutations in SPRY domain-containing genes have been reported in diseases like Opitz syndrome and familial Mediterranean fever, but as yet limited information is available on their association with the onset and progression of cancer. 
+%%%****FIX THIS LATER once we have heritability
+% \subsection{The contribution of FDMs to trait heritability}
+% To understand the contribution of human specific  variants to trait variation, we aim to estimate the proportion of phenotypic variance attributed to FDMs (FDMs heritability) and to test the null hypothesis that per-FDM heritability is the same as the heritability of a non-human specific SNP (MH) SNP. 
+% To estimate FDM heritability, we used a recently proposed method (RHE-mc) that can partition the heritability of a phenotype measured in large samples across various genomic annotations (Pazokitoroudi 2020). We applied RHE-mc with genomic annotations that correspond to the ancestry of each SNP (FDM vs MH) to estimate FDM heritability ($h^2_{FDM}$) as seen in Table \ref{table:4.1}. We also attempted to estimate whether per-FDM heritability is the same as the per-SNP heritability of MH SNPs ($\Delta_{h^2}$). A positive (negative) value of $\Delta_{h^2}$ indicates that, on average, a FDM makes a larger (smaller) contribution to phenotypic variation relative to a MH SNP. We found a number a traits in which FDMs made a smaller contribution to heritability than their counterparts. (Figs. \ref{fig:4.2} \ref{fig:4.3} \ref{fig:4.4}).
+
+\section{Methods}
+\subsection{UK Biobank (UKBB) genotype QC}
+We restricted all our analyses to a set of high-quality imputed SNPs (with a hard call threshold of 0.2 and an info score greater than or equal to 0.8), which, among the 291,273 imputed genotypes of UKBB unrelated white British individuals, 1) have MAF higher than 0.001, 2) are under Hardy-Weinberg equilibrium ($p > 10^{-7}$), and 3) are confidently imputed in more than 99\% of the genomes. Additionally, we excluded SNPs in the MHC region, resulting in a total of 7,774,235 SNP which we refer to as QC-ed SNPs.
+\subsection{Identifying Fixed Derived Mutations}
+ We first determined derived allele frequencies from 504 African individuals in the 1000 genomes project phase3. We combined allele frequencies from ESN, GWD, LWK, MSL, YRI individuals in 1000 genomes in order to determine an African derived allele frequency for. We then determine the allele frequency in archaic individuals combining Vindija, and Altai neanderthals as well as the Denisovan individual. Combining the datasets, we examined 41,864,101 SNPs. We then filtered out SNPs with an African derived allele frequency >0.99 and >0.95 to find 25,448 and 50,505 mutations that are likely human specific. We then intersected these variants with those QC-ed SNPs in the UK Biobank to find 19,632 and 9,407 confident fixed derived mutations able to be tested. We expanded this set by including all QCed SNPs that were withing 200kb of a FDM95 and had an $r^2$ > 0.8, 0.9 or 0.99 to get 73,129, 71,280 and 62,933 expanded FDMs. 
+ 
+\subsection{Association Testing}
+To identify individual FDMs associated with a phenotype, we fit a linear regression model using plink 2.0 --glm and included covariates controlling for age, sex and the first 20 genotypic PCs. We used a stringent p-value threshold of $10^{-10}$ to correct for the number of FDMs and phenotypes tested. We found 6573, 6411, and 5804 for expanded sets with $r^2$ > 0.8, 0.9 or 0.99. For each phenotype, we clumped all significant FDMs that lie within 250 kb and with an LD threshold ($r^2$) of 0.5 using a significance threshold for the index SNP of $10^{-10}$.
+\subsection{Annotating FDMs}
+We annotated all unique credible FDMs using SnpEff \cite{cingolani2012program} which uses Sequence Ontology (http://www.sequenceontology.org/) to assign standardized terminology for assessing sequence change and impact. 
+
+% \subsection{Estimating FDM heritability with RHE-mc}
+% We are interested in estimating the proportion of phenotypic variance attributed to FDMss (true FDM heritability $h^2_{FDM}$) and evaluating if the heritability at a FDM (per-FDM heritability) is larger or smaller than that of a background MH SNP. To this end, we used a variance components model that partitions phenotypic variance across genomic annotations that include ancestry (FDM vs MH) as one of the input annotations.
+
+% We use RHE-mc, a method that can partition genetic variance across large sample sizes, to estimate FDM heritability (Pazokitoroudi 2020). For each phenotype, we run RHE-mc, in turn, with four types of input annotations: ancestry alone, ancestry + MAF, ancestry + LD, and ancestry + MAF + LD as described above. The ancestry+ MAF, ancestry + LD, and ancestry + MAF + LD annotations are intended to account for the differences in the MAF and LD properties of FDMs compared to MH SNPs.
+
+% To estimate FDM heritability, $\hat{h^2_{FDM}}$ , we combine the heritability of each bin corresponding to Neanderthal ancestry:
+
+% $$\hat{h^2_{FDM}} = \sum_i \hat{h^2_{FDM,i}}$$
+% and the heritability estimates for any bins with modern human ancestry are used to compute the total heritability from MH. Thus, when we estimate FDM heritability from RHE-mc run with ancestry + MAF annotations, we add the heritability estimates from five bins of low to high MAF FDMs.
+ 
+% To compare the average heritability at a FDM to the heritability of a background MH SNP that is chosen to match the FDM in terms of MAF and LD profiles, we compute the following statistic:
+% $$\hat{\Delta_{h^2}}=\hat{h^2_{FDM}}-\hat{h^2_{MH}}$$
+% where $\hat{h^2_{MH}} = \sum_i \frac{M_{FDM,i}}{M_{MH,i}} \hat{h^2_{MH,i}}$, iis the heritability of the background set matched for the MAF and LD profile of the set of FDMs. Here $M_{MH,i}$ denotes the number of MH SNPs in bin $i$  (defined according to MAF and/or LD of the MH SNPs) while $M_{FDM,i}$ denotes the number of FDMs in the corresponding bin. A more detailed justification of this statistic is provided in Note S4.
+
+% The standard errors (s.e.) of these statistics are computed using 100 jackknife blocks using an extension of RHE-mc that takes into account the covariance among different annotations. This new version of the RHE-mc is now available at https://github.com/alipazokit/RHEmc-coeff.
+\section{Discussion}
+Our research shows that we are able to use the effect of Neanderthal introgression on the modern human genome to find a signal of human specific mutations that have nearly become fixed in certain modern humans populations. We present a new method able to find these fixed derived mutations and exploit their heterozygosity in Europeans to discover a signal of association in a wide range of phenotypes. We also use our fine mapping pipeline to discover two regions of the genome that are confidently fixed-derived and have associations with a number a phenotypes. We find that the two regions are in close proximity to genes that are related to immunity suggesting that these regions may have importance in development of immune response in modern humans. 
+One limitation of our study is that many regions containing significantly associated FDMs were removed potentially due to the limited power of our procedure that aims to control the FDR. Our current ongoing work involves fine-tuning our procedure to determine if can more accurately represent what is defined as ``fixed derived'' and not fixed derived. One approach is to run evolutionary simulations to determine how the genetic architecture of these variants may look under a demography representing introgressed DNA and fixation of varaints.
+\newpage
+\FloatBarrier
+\section{Figures}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/fig4.1}.png}
+    \caption{Cartoon depicting how Fixed Derived Mutations are determined}
+    \label{fig:4.1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/FDMS.99.af}.png}
+    \caption{European MAF for mutations that were $>99\%$ for the derived allele in 1000 genomes phase 3 African population.}
+    \label{fig:4.2}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/FDMS.95.af}.png}
+    \caption{European MAF for mutations that were $>95\%$ for the derived allele in 1000 genomes phase 3 African population.}
+    \label{fig:4.3}
+\end{figure}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/FDs.95.sig.assoc}.png}
+    \caption{Number of Significant FDMs by Phenotypic category. Each dot in a category represents a unique phenotype.}
+    \label{fig:4.4}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/chr1.conffd.locuszoom}.png}
+    \caption{Zoomed in view of the confident credible FDM region on chromosome 1}
+    \label{fig:4.5}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{{chapter4/figures/chr12.conffd.locuszoom}.png}
+    \caption{Zoomed in view of the confident credible FDM region on chromosome 12}
+    \label{fig:4.6}
+\end{figure}
+
+%\begin{figure}[htb]
+%    \centering
+%    \includegraphics[width=\textwidth]{{chapter4/figures/Z_nim_mh_category}.pdf}
+%    \caption{Difference in heritability of FDMs vs modern humans by phenotype and category}
+%    \label{fig:4.7}
+%\end{figure}
+\FloatBarrier
+
+
+\section{Tables}
+\begin{table}[htb]
+\begin{tabular}{lllllll}
+\textbf{CHR} & \textbf{POS} & \textbf{REF} & \textbf{A1} & \textbf{BETA} & \textbf{P} & \textbf{Phenotype} \\
+12 & 56863770  & G & C & 0.0312767  & 1.69E-18 & albumin           \\
+12 & 56865040  & G & T & 0.0313671  & 1.34E-18 & albumin           \\
+12 & 56865056  & G & C & 0.0318923  & 3.58E-19 & albumin           \\
+1  & 161476533 & T & C & 0.0385679  & 7.71E-22 & asp\_at           \\
+1  & 161476949 & C & G & 0.0382341  & 1.58E-21 & asp\_at           \\
+1  & 161478708 & G & A & 0.0386901  & 4.62E-22 & asp\_at           \\
+1  & 161479352 & G & A & 0.0383936  & 8.03E-22 & asp\_at           \\
+1  & 161479438 & C & T & 0.0382705  & 1.06E-21 & asp\_at           \\
+12 & 56863770  & G & C & -0.0222723 & 9.99E-11 & c\_reactive\_prot \\
+12 & 56865056  & G & C & -0.0225582 & 5.72E-11 & c\_reactive\_prot \\
+1  & 161476533 & T & C & 0.0282701  & 3.37E-13 & ggt               \\
+1  & 161476949 & C & G & 0.0282119  & 3.58E-13 & ggt               \\
+1  & 161478708 & G & A & 0.0284026  & 2.30E-13 & ggt               \\
+1  & 161479352 & G & A & 0.0284242  & 2.00E-13 & ggt               \\
+1  & 161479438 & C & T & 0.0283498  & 2.27E-13 & ggt               \\
+12 & 56863770  & G & C & 0.0206617  & 2.17E-12 & urate             \\
+12 & 56865040  & G & T & 0.0205196  & 3.03E-12 & urate             \\
+12 & 56865056  & G & C & 0.0202435  & 5.92E-12 & urate             \\
+12 & 56863770  & G & C & 0.0332519  & 1.24E-23 & urea              \\
+12 & 56865040  & G & T & 0.0332406  & 1.25E-23 & urea              \\
+12 & 56865056  & G & C & 0.0330631  & 2.17E-23 & urea             
+\end{tabular}
+\caption{Confident-credible FDMs and their associations with phenotypes}
+\label{tab:4.1}
+\end{table}
+
+\begin{table}[htb]
+\begin{tabular}{llllllll}
+\textbf{CHR} & \textbf{POS} & \textbf{REF} & \textbf{ALT} & \textbf{Annotaion}  & \textbf{Gene}  \\
+1  & 161476533 & T & C & downstream\_gene\_variant &  FCGR2A \\
+1  & 161476949 & C & G & downstream\_gene\_variant & FCGR2A \\
+1  & 161478708 & G & A & upstream\_gene\_variant   & RP11-25K21.6 \\
+1  & 161479352 & G & A & upstream\_gene\_variant   & RP11-25K21.6 \\
+1  & 161479438 & C & T & upstream\_gene\_variant   & RP11-25K21.6 \\
+12 & 56863770  & G & C & 3\_prime\_UTR\_variant    & SPRYD4 \\
+12 & 56865040  & G & T & 3\_prime\_UTR\_variant    & GLS2 \\
+12 & 56865056  & G & C & 3\_prime\_UTR\_variant    & GLS2 
+\end{tabular}
+\caption{Confident FDMs and their functional effect on genes}
+\label{tab:4.2}
+\end{table}
